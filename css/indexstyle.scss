@@ -1,0 +1,260 @@
+/* Style the body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Header with image*/
+#header {
+    padding: 250px;
+    text-align: center;
+    color: black;
+    background-image: url("https://burst.shopifycdn.com/photos/spa-tools-on-stones.jpg?width=925&format=pjpg&exif=1&iptc=1");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#header .content {
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    /* Fallback color */
+    background: rgba(0, 0, 0, 0.5);
+    /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    font-family: cursive;
+    font-size: larger;
+}
+
+/* Style the top navigation bar */
+
+/*Drop Down Menu Style */
+.dropdownlist {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdownlist a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.navbar {
+    display: flex;
+    background-color: #333;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 100%;
+    /* Full width */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Navagation bar - Change color on hover */
+.navbar a:hover {
+    background-color: #F68989;
+    color: black;
+}
+
+/* The "Purchase a Voucher" button section - index.html */
+#general {
+    padding: 60px;
+    background-color: #874356;
+}
+
+.generalcontent {
+    padding: 20px;
+    text-align: center;
+    color: #f1f1f1;
+    margin-top: auto;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #F68989;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 50%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* Three image containers */
+.column {
+    float: left;
+    width: 25%;
+    padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 25%;
+    padding: 5px;
+}
+
+/* Footer - (Applies to all pages) */
+
+#footer-container {
+    /* This will be the color of my container */
+    background-color: #333;
+    padding: 40px;
+}
+
+.columnf {
+    float: left;
+    /* Size of the left column */
+    width: 20%;
+    padding: 10px;
+    /* The line in between the coloumns */
+    border-left: 2px solid white;
+
+}
+
+/* The Footer email links (Applies to all pages)*/
+a:link {
+    /* Removes the underline */
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+
+}
+
+a:hover {
+    /* The colour the link turns when you hover over it */
+    color: #F68989;
+    background-color: transparent;
+}
+
+#right-col {
+    /* Size of the right column */
+    width: 80%;
+}
+
+.columnf p,
+a {
+    text-align: left;
+    color: white;
+    font-size: 15px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+
+    .row,
+    .navbar,
+    .columnf {
+        flex-direction: column;
+    }
+}
+
+/* General info about the spa CSS - index.html */
+#generalcontainer {
+    background-color: #F6E7D8;
+    padding: 40px;
+}
+
+.generalcontainer {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    letter-spacing: -2px;
+    border-bottom: 2px solid black;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+p {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    padding: 5px;
+}
+
+/* Testimonial Container CSS - index.html*/
+.testimonial-container {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0
+}
+
+.testimonial-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.testimonial-container img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+@media (max-width: 500px) {
+    .testimonial-container {
+        text-align: center;
+    }
+
+    .testimonial-container img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+}
